@@ -1,0 +1,62 @@
+/* Zernio clone — design tokens (reconstruits depuis screenshot + meta theme-color) */
+:root {
+  --background: #fafafa;
+  --foreground: #111113;
+  --card: #ffffff;
+  --card-foreground: #111113;
+  --popover: #ffffff;
+  --primary: #eb3514;
+  --primary-foreground: #ffffff;
+  --secondary: #f4f4f5;
+  --secondary-foreground: #18181b;
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+  --accent: #f4f4f5;
+  --accent-foreground: #18181b;
+  --destructive: #dc2626;
+  --border: #e6e6e9;
+  --input: #e6e6e9;
+  --ring: #eb3514;
+  --sidebar: #f7f7f8;
+  --sidebar-foreground: #3f3f46;
+  --sidebar-border: #e6e6e9;
+  --sidebar-accent: #ececee;
+  --sidebar-primary: #eb3514;
+  --radius: 0.5rem;
+  /* tokens layout utilisés par le markup zernio */
+  --size-control-md: 2rem;
+  --size-control-sm: 1.75rem;
+  --size-row: 2.5rem;
+  --size-page-gutter: 0.875rem;
+  --size-shell-bar: 3.25rem;
+  --size-sidebar: 16rem;
+  --size-sidebar-collapsed: 3rem;
+  --dashboard-banner-height: 0px;
+  color-scheme: light;
+}
+
+html, body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Geist Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* typo classes custom du markup zernio */
+.type-eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--muted-foreground);
+  text-transform: none;
+}
+.type-section-title { font-size: 0.875rem; font-weight: 600; color: var(--foreground); }
+
+.scrollbar-subtle::-webkit-scrollbar { width: 8px; height: 8px; }
+.scrollbar-subtle::-webkit-scrollbar-thumb { background: #d9d9de; border-radius: 4px; }
+.scrollbar-subtle::-webkit-scrollbar-track { background: transparent; }
+
+/* ancres utilitaires absentes du CDN tailwind */
+.hover\:bg-accent\/50:hover { background: color-mix(in srgb, var(--accent) 50%, transparent); }
